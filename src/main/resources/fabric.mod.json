@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "lazysendremastered",
+	"version": "${version}",
+	"name": "Lazys end remastered",
+	"description": "tset",
+	"authors": [
+		"lazy"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/lazysendremastered/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.lazy.lazysendremastered.LazysEndRemastered"
+		],
+		"fabric-datagen": [
+			"net.lazy.lazysendremastered.LazysEndRemasteredDataGenerator"
+		],
+		"client": [
+			"net.lazy.lazysendremastered.LazysEndRemasteredClient"
+		]
+	},
+	"mixins": [
+		"lazysendremastered.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.2",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
