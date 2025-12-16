@@ -11,8 +11,8 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item PEPPERS_ITEM_TEST = registerItem("nether_soul", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(LazysEndRemastered.MOD_ID,"nether_soul")))));
-
+    public static final Item NETHER_SOUL = registerItem("nether_soul", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(LazysEndRemastered.MOD_ID,"nether_soul")))));
+    public static final Item OVERSOUL_SOUL = registerItem("overworld_soul", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(LazysEndRemastered.MOD_ID,"overworld_soul")))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(LazysEndRemastered.MOD_ID, name), item);
@@ -22,7 +22,8 @@ public class ModItems {
         LazysEndRemastered.LOGGER.info("Registering Mod Items for " + LazysEndRemastered.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(fabricItemGroupEntries -> {
-            fabricItemGroupEntries.add(PEPPERS_ITEM_TEST);
+            fabricItemGroupEntries.add(NETHER_SOUL);
+            fabricItemGroupEntries.add(OVERSOUL_SOUL);
         });
     }
 }
